@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "species": "warocqueanum",
     "title": "File:Anthurium warocqueanum - Auckland Domain Winter Garden - Auckland, NZ - DSC08653.jpg",
@@ -102,5 +102,91 @@
     "license": "Public domain",
     "licenseUrl": "",
     "file": "crystallinum-planta.jpg"
+  },
+  {
+    "category": "Philodendron verrucosum",
+    "title": "File:Philodendron verrucosum foliage.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Philodendron_verrucosum_foliage.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/84/Philodendron_verrucosum_foliage.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Philodendron_verrucosum_foliage.jpg",
+    "author": "Theoperatingsystem",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "philodendron-verrucosum.jpg"
+  },
+  {
+    "category": "Philodendron gloriosum",
+    "title": "File:Philodendron gloriosum leaves - closeup.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Philodendron_gloriosum_leaves_-_closeup.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Philodendron_gloriosum_leaves_-_closeup.jpg/960px-Philodendron_gloriosum_leaves_-_closeup.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Philodendron_gloriosum_leaves_-_closeup.jpg",
+    "author": "Theoperatingsystem",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "philodendron-gloriosum.jpg"
+  },
+  {
+    "category": "Philodendron melanochrysum",
+    "title": "File:Philodendron melanochrysum 0zz.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Philodendron_melanochrysum_0zz.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Philodendron_melanochrysum_0zz.jpg/960px-Philodendron_melanochrysum_0zz.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Philodendron_melanochrysum_0zz.jpg",
+    "author": "Photo by David J. Stang",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "philodendron-melanochrysum.jpg"
+  },
+  {
+    "category": "Monstera deliciosa",
+    "title": "File:Costela de Adão Entrepostas.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Costela_de_Ad%C3%A3o_Entrepostas.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Costela_de_Ad%C3%A3o_Entrepostas.jpg/960px-Costela_de_Ad%C3%A3o_Entrepostas.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Costela_de_Ad%C3%A3o_Entrepostas.jpg",
+    "author": "Adriana Cezar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "monstera-deliciosa.jpg"
+  },
+  {
+    "category": "Alocasia micholitziana",
+    "title": "File:Alocasia micholitziana 2.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Alocasia_micholitziana_2.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Alocasia_micholitziana_2.JPG/960px-Alocasia_micholitziana_2.JPG",
+    "source": "https://commons.wikimedia.org/wiki/File:Alocasia_micholitziana_2.JPG",
+    "author": "Dinkum",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "file": "alocasia-micholitziana.jpg"
+  },
+  {
+    "category": "Secateurs",
+    "title": "File:Background Isolated Garden Scissors Edited 2020 (49913697766).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Background_Isolated_Garden_Scissors_Edited_2020_%2849913697766%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Background_Isolated_Garden_Scissors_Edited_2020_%2849913697766%29.jpg/960px-Background_Isolated_Garden_Scissors_Edited_2020_%2849913697766%29.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Background_Isolated_Garden_Scissors_Edited_2020_(49913697766).jpg",
+    "author": "Tool Dude8mm",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "tesoura-poda.jpg"
+  },
+  {
+    "category": "File:Colocasia esculenta.jpg",
+    "title": "File:Colocasia esculenta.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Colocasia_esculenta.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Colocasia_esculenta.jpg",
+    "author": "No machine-readable author provided. Hans B.~commonswiki assumed (based on copyright claims).",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "file": "colocasia-esculenta.jpg"
+  },
+  {
+    "category": "File:Terracotta Pots (Unsplash).jpg",
+    "title": "File:Terracotta Pots (Unsplash).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Terracotta_Pots_%28Unsplash%29.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Terracotta_Pots_(Unsplash).jpg",
+    "author": "Annie Spratt anniespratt",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "file": "vaso-terracota.jpg"
   }
 ]

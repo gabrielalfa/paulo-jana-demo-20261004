@@ -12,6 +12,13 @@
     const form = document.getElementById('checkout-form');
     const status = document.getElementById('checkout-status');
     const originalTitle = document.title;
+    const isShop = Boolean(document.getElementById('shop-grid'));
+    const catalogAnchor = isShop ? '#catalogo' : '#colecao';
+    const fullName = product => product.fullName || 'Anthurium ' + product.name;
+    document.querySelectorAll('[data-back-catalog]').forEach(link => {
+        link.href = catalogAnchor;
+        link.textContent = link.classList.contains('text-link') ? (isShop ? '← Voltar à loja' : '← Voltar à coleção') : (isShop ? 'Loja' : 'Coleção');
+    });
     let currentPlant = null;
     const text = (id, value) => { document.getElementById(id).textContent = value; };
     function renderDetails(plant) {
@@ -20,12 +27,17 @@
         text('detail-breadcrumb-name', plant.name);
         text('detail-label', plant.label);
         text('detail-description', plant.description);
-        text('detail-species', 'Anthurium ' + plant.name);
+        text('detail-species', fullName(plant));
+        text('detail-genus', plant.genus || 'Anthurium');
+        text('detail-spec-label', plant.specLabel || 'Espécie');
+        text('detail-shape-label', plant.shapeLabel || 'Folhagem');
+        text('detail-texture-label', plant.textureLabel || 'Textura');
+        text('related-title', isShop ? 'Outros produtos para descobrir.' : 'Outros antúrios da coleção.');
         text('detail-shape', plant.shape);
         text('detail-texture', plant.texture);
         const mainImage = document.getElementById('imgPrincipal');
         mainImage.src = assets + plant.image;
-        mainImage.alt = 'Anthurium ' + plant.name + ' — fotografia de referência';
+        mainImage.alt = fullName(plant) + ' — fotografia de referência';
         const thumbs = document.getElementById('detail-thumbnails');
         thumbs.replaceChildren();
         [plant.image, plant.detail].filter(Boolean).forEach((file, index) => {
@@ -47,19 +59,19 @@
         });
         const related = document.getElementById('detail-related');
         related.replaceChildren();
-        catalog.filter(item => item.id !== plant.id).forEach(item => {
+        catalog.filter(item => item.id !== plant.id).sort((a, b) => Number(b.shopCategory === plant.shopCategory) - Number(a.shopCategory === plant.shopCategory)).slice(0, 5).forEach(item => {
             const link = document.createElement('a'); link.href = '#produto/' + item.id; link.className = 'related-card';
-            const img = document.createElement('img'); img.src = assets + item.image; img.alt = 'Anthurium ' + item.name; img.loading = 'lazy';
+            const img = document.createElement('img'); img.src = assets + item.image; img.alt = fullName(item); img.loading = 'lazy';
             const name = document.createElement('h3'); name.textContent = item.name;
             const value = document.createElement('p'); value.textContent = 'Valor sob consulta';
             link.append(img, name, value); related.append(link);
         });
-        document.title = 'Anthurium ' + plant.name + ' | Paulo & Jana — Plantas';
+        document.title = fullName(plant) + ' | Paulo & Jana — Plantas';
     }
     function navigate() {
-        const match = /^#produto\/([a-z]+)$/.exec(location.hash);
+        const match = /^#produto\/([a-z0-9-]+)$/.exec(location.hash);
         const plant = match && catalog.find(item => item.id === match[1]);
-        if (productDialog.open) productDialog.close();
+        if (productDialog && productDialog.open) productDialog.close();
         if (photoDialog.open) photoDialog.close();
         if (checkout.open) checkout.close();
         document.body.classList.remove('dialog-open');
@@ -81,12 +93,17 @@
         const zoom = document.getElementById('zoom-image'); zoom.src = source.src; zoom.alt = source.alt;
         photoDialog.showModal(); document.body.classList.add('dialog-open');
     });
+    if (!productDialog) {
+        photoDialog.querySelector('[data-close]').addEventListener('click', () => photoDialog.close());
+        photoDialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+    }
     function abrirCheckout() {
         if (!currentPlant) return;
         form.reset(); form.hidden = false; status.hidden = true;
         text('checkout-nome', currentPlant.name);
+        text('checkout-genus', currentPlant.genus || 'Anthurium');
         text('checkout-preco', 'Valor sob consulta');
-        const image = document.getElementById('checkout-img'); image.src = assets + currentPlant.image; image.alt = 'Anthurium ' + currentPlant.name;
+        const image = document.getElementById('checkout-img'); image.src = assets + currentPlant.image; image.alt = fullName(currentPlant);
         checkout.showModal(); checkout.scrollTop = 0; document.body.classList.add('dialog-open');
     }
     document.getElementById('comprar-agora').addEventListener('click', abrirCheckout);
@@ -101,7 +118,7 @@
         event.preventDefault();
         if (!form.reportValidity() || !currentPlant) return;
         const payment = form.elements.pagamento.value;
-        text('checkout-result', 'Você percorreu a compra de um Anthurium ' + currentPlant.name + ' com a opção ' + payment + '.');
+        text('checkout-result', 'Você percorreu a compra de ' + fullName(currentPlant) + ' com a opção ' + payment + '.');
         form.hidden = true; status.hidden = false;
         status.querySelector('h3').focus();
     });
